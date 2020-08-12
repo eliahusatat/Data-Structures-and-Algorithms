@@ -1,5 +1,10 @@
 package linked_list;
 
+/**
+ * this class represent a single node for linkedlist for int
+ * @author Eliahu Satat
+ */
+
 public class LLNode implements  Comparable<LLNode>{
 	private int data;
 	private LLNode next, prev;
@@ -9,6 +14,9 @@ public class LLNode implements  Comparable<LLNode>{
 		this.next = this.prev = null;
 	}
 
+	/**
+	 * getters and setters
+	 */
 	public int getData() {
 		return data;
 	}
