@@ -159,8 +159,8 @@ public class BST {
 				flag = true;
 			}
 			current.setData(temp.getData());
-			if(flag){  temp.getFather().setRight(null); }
-			else { temp.getFather().setLeft(null);}
+			if(flag){  temp.getFather().setRight(null); } // if he is the right son 
+			else { temp.getFather().setLeft(null);}// if he is the left son
 			temp.setFather(null);
 			size--;
 			return true;
