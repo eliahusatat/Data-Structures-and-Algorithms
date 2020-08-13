@@ -5,3 +5,4 @@ Implementaion of some Data Structures in java
 - Stack
 - Queue
 - Binary Search Tree
+- Trie
