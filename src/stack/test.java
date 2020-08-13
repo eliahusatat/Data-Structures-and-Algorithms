@@ -1,6 +1,5 @@
 package stack;
 
-import queue.queue;
 
 public class test {
 
@@ -18,9 +17,9 @@ public class test {
 			e.printStackTrace();
 		}
 		System.out.println(s.isEmpty());
-		int a;
+		
 		try {
-			a = s.pop();
+		   s.pop();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
