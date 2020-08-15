@@ -6,3 +6,4 @@ Implementaion of some Data Structures in java
 - Queue
 - Binary Search Tree
 - Trie
+- Heap
