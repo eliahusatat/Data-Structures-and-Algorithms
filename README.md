@@ -7,3 +7,4 @@ Implementaion of some Data Structures in java
 - Binary Search Tree
 - Trie
 - Heap
+- Hash Table
