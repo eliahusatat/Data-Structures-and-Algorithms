@@ -10,7 +10,7 @@ public class test {
 		mh.add(5);
 		mh.add(3);
 		mh.printArr();
-		//System.out.println(mh.peek());
+		System.out.println(mh.peek());
 		System.out.println(mh.pull());
 		mh.printArr();
 
