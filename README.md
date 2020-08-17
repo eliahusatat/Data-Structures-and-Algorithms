@@ -1,10 +1,11 @@
 # Data-Structures
-Implementaion of some Data Structures in java
+Implementaion of some Data Structures and Algorithms in java
 
 - Linkedlist
 - Stack
 - Queue
-- Binary Search Tree
+- Binary search tree
 - Trie
 - Heap
-- Hash Table
+- Hash table
+- Quick sort
