@@ -19,7 +19,7 @@ public class quick_sort {
 		int pivot = arr[(right + left)/2]; // peek pivot to be the middle 
 		int index = partition(arr , left ,right , pivot); // swap the element from left to right according to the pivot
 		quickSortHelp(arr,left ,index -1); // call recursion on each side
-		quickSortHelp(arr,index, index);
+		quickSortHelp(arr,index, right);
 		
 	}
 	private static int partition(int arr [], int left, int right , int pivot) {
