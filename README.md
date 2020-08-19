@@ -9,3 +9,4 @@ Implementaion of some Data Structures and Algorithms in java
 - Heap
 - Hash table
 - Quick sort
+- Merge sort
