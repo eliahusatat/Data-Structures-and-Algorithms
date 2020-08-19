@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 /**
- * this class implements quick sort
+ * this class implements quick sort ~ O(NLog(N))
  * @author Eliahu Satat
  */
 

@@ -1,6 +1,10 @@
 package sort;
 
 import java.util.Arrays;
+/**
+ * this class implements bubble sort - O(N^2)
+ * @author Eliahu Satat
+ */
 
 public class bubble_sort {
 	
