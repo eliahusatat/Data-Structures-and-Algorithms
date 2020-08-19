@@ -1,6 +1,10 @@
 package sort;
 
 import java.util.Arrays;
+/**
+ * this class implements quick sort
+ * @author Eliahu Satat
+ */
 
 public class quick_sort {
 	
