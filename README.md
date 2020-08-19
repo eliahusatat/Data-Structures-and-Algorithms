@@ -10,3 +10,4 @@ Implementaion of some Data Structures and Algorithms in java
 - Hash table
 - Quick sort
 - Merge sort
+- Binary search
