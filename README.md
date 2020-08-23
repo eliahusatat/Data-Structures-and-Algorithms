@@ -1,4 +1,4 @@
-# Data-Structures
+# Data-Structures and Algorithms
 Implementaion of some Data Structures and Algorithms in java
 
 - Linkedlist
