@@ -8,6 +8,9 @@ Implementaion of some Data Structures and Algorithms in java
 - Trie
 - Heap
 - Hash table
+- Graph
 - Quick sort
 - Merge sort
 - Binary search
+- BFS
+- DFS
