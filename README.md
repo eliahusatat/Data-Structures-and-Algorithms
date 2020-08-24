@@ -14,3 +14,4 @@ Implementaion of some Data Structures and Algorithms in java
 - Binary search
 - BFS
 - DFS
+- Dijkstra
