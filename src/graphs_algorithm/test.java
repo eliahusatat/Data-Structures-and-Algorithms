@@ -53,7 +53,7 @@ public class test {
 //		System.out.println(g.hasPathBFS(v1, v5));
 //		System.out.println(g.hasPathBFS(v6, v4));
 		
-		g.Dijkstra(v1);
+		g.Dijkstra(v4);
 		
 		LinkedList<GNode> v = new LinkedList<GNode>();
 		v.add(v1);
@@ -64,9 +64,20 @@ public class test {
 		v.add(v6);
 		v.add(v7);
 		v.add(v8);
+
+		
+		g.Dijkstra(v1);
 		for (GNode i : v) {
-				System.out.println("the ver: "+ i.getId()+"is: "+i.dijkstraDis);
-			}			
+			System.out.println("the dis to ver: "+ i.getId()+" is: "+i.dijkstraDis);
+			System.out.println("the path from ver: "+ i.getId()+" is: ");
+			i.printDijkstraPath();
+		}
+	
+		for (GNode i : v) {
+		g.Dijkstra(i);
+	   }
+		//g.BFSInitDijkstra(v4);
+		
 
 
 	}

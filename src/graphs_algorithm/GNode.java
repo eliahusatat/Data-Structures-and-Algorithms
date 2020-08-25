@@ -14,6 +14,7 @@ public class GNode implements Comparator<GNode>{
 	private int id;
 	private LinkedList <GNode> adjacent;
     int dijkstraDis;
+    GNode dijkstraFather ;
     int cost ;
 	HashMap <GNode ,Integer> weight;
 	
@@ -27,6 +28,7 @@ public class GNode implements Comparator<GNode>{
 		adjacent = new LinkedList <GNode>();
 		weight = new HashMap<GNode ,Integer>();
 		dijkstraDis = Integer.MAX_VALUE;
+		dijkstraFather = null;
 	}
 	
 	public GNode(int cost) {
@@ -68,6 +70,17 @@ public class GNode implements Comparator<GNode>{
 		if(n1.dijkstraDis > n2.dijkstraDis)
 			return 1;
 		return 0;
+	}
+	
+	public void printDijkstraPath() {
+		GNode current = this.dijkstraFather;
+		System.out.print(this.getId());
+		while(current != null) {
+			System.out.print("->"+current.getId());
+			current = current.dijkstraFather;
+		}
+		System.out.print(";");
+		System.out.println();
 	}
 
 }

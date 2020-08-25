@@ -107,25 +107,34 @@ public class graph {
 
 	}
 
+	
+	/**
+	 * this function find all the minimum distance of all the 
+	 * vertexes from the source vertex - by Dijkstra algorithm and store if in 
+	 * the "dijkstraDis" variable
+	 * @param source - the source vertex for Dijkstra
+	 * @note this Dijkstra implements is with weight on the vertex not on the edge
+	 */
 	public void Dijkstra(GNode source){
 		int edgeDistance = -1;
 		int newDistance = -1;
-		//BFSInitDijkstra(source);
+		this.BFSInitDijkstra(source); // init all the vertex distance to be finite
 		Set<Integer> visited = new HashSet<Integer>();
 		PriorityQueue<GNode> pq = new PriorityQueue<GNode>(this.numV,new GNode());
-		source.dijkstraDis = 0 ;
+		source.dijkstraDis = 0 ; // the dis of the source is 0
 		pq.add(source);
-		while(visited.size() != this.numV-1) {
-			GNode u = pq.remove();
+		while(visited.size() != this.numV) { // while we didn't visited in everyone
+			GNode u = pq.remove(); // gets the minimum distance vertex 
 			visited.add(u.getId());
 			edgeDistance = -1;
 			newDistance = -1;
-			for (GNode v : u.getAdjacent()) {
+			for (GNode v : u.getAdjacent()) { // and check if he can decrease the distance of all his neighbors 
 				if(!visited.contains(v.getId())) {
 					edgeDistance = v.cost;
 					newDistance = u.dijkstraDis + edgeDistance;
-					if(newDistance < v.dijkstraDis) {
+					if(newDistance < v.dijkstraDis) { //If the distance through it is smaller than the existing distance
 						v.dijkstraDis = newDistance;
+						v.dijkstraFather = u;
 						pq.add(v);
 					}
 				}
@@ -135,15 +144,22 @@ public class graph {
 	}
 
 
-	public void BFSInitDijkstra(GNode source ) {
+	/**
+	 * this function initial all the vertexes in the graph
+	 * for Dijkstra algorithm - by BFS algorithm 
+	 * @param source - the node BFS start 
+	 */
+	public void BFSInitDijkstra(GNode source) {
 		LinkedList<GNode> nextToVisit = new LinkedList<GNode>();
 		HashSet<Integer> visited = new HashSet <Integer>();
 		nextToVisit.add(source);
 		while(!nextToVisit.isEmpty()) {
 			GNode node = nextToVisit.remove(); // get the next vertex to check 
 			if(visited.contains(node.getId())) continue; // if we already been in this vertex don't do anything
-			visited.add(source.getId());
+			visited.add(node.getId());
 			node.dijkstraDis = Integer.MAX_VALUE;
+			node.dijkstraFather = null;
+			//System.out.println("init node num: " + node.getId());
 			for (GNode n: node.getAdjacent()) { // put all his adjacent to search
 				nextToVisit.add(n);
 			}
